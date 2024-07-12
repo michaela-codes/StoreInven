@@ -48,12 +48,18 @@ public:
 		return location;
 	}
 
-	//NOT WORKING
-StoreInventory operator++(int) {
-	StoreInventory temp(itemName, location, numItems);
-	numItems++;
-	return temp;
-}
+	
+	StoreInventory operator++(int) {
+		StoreInventory temp(itemName, location, numItems);
+		numItems++;
+		return temp;
+	}
+
+	StoreInventory operator--(int) {
+		StoreInventory temp(itemName, location, numItems);
+		numItems--;
+		return temp;
+	}
 };
 
 int main() {
@@ -62,7 +68,9 @@ int main() {
 	std::cout << "Number of Item: " << item1.getNumItems() << "\n";
 	std::cout << "Location: " << item1.getLocation() << "\n";
 	item1++;
-	std::cout << "Updated Item number: " << item1.getNumItems(); "\n";
+	std::cout << "Updated Item number: " << item1.getNumItems() << "\n";
+	item1--;
+	std::cout << "Updated Item Number: " << item1.getNumItems() << "\n";
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
