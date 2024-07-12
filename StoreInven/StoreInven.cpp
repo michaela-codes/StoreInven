@@ -50,7 +50,7 @@ public:
 
 	//NOT WORKING
 StoreInventory operator++(int) {
-	StoreInventory temp(itemName, numItems);
+	StoreInventory temp(itemName, location, numItems);
 	numItems++;
 	return temp;
 }
