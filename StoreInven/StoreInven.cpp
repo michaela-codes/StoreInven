@@ -13,7 +13,9 @@ private:
 	int numItems;
 
 public:
-	   StoreInventory(string item, string locationItem, int numOfItems) {
+	friend ostream& operator << (ostream&, const StoreInventory&);
+
+	StoreInventory(string item, string locationItem, int numOfItems) {
 		itemName = item;
 		location = locationItem;
 		numItems = numOfItems;
@@ -82,6 +84,11 @@ public:
 	//NEED TO ADD ADDITION OPERATOR OVERLOADER.
 	
 };
+
+ostream& operator << (ostream& strm, const StoreInventory& s) {
+	strm << "Item:" << s.itemName << ", Location:" << s.location << ", Number: " << s.numItems;
+	return strm;
+}
 
 int main() {
 	StoreInventory item1("soup", "aisle1" , 24);
