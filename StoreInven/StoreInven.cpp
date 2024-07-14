@@ -75,12 +75,12 @@ public:
 	}
 
 	
-	//NEED TO TEST... single or double equals sign?
-	bool operator=(const StoreInventory& other) const {
+	//NEED TO TEST.
+	bool operator==(const StoreInventory& other) const {
 		return itemName = other.itemName;
 	}
 	
-	//NEED TO ADD INPUT/OUTPUT STREAM OPERATORS.
+	//NEED TO ADD INPUT STREAM OPERATOR.
 	//NEED TO ADD ADDITION OPERATOR OVERLOADER.
 	
 };
@@ -108,6 +108,8 @@ int main() {
 	else {
 	std::cout << "More of Item 3";
 	};
+
+	std::cout << item2 << endl;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
