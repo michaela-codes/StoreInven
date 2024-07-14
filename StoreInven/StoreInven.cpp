@@ -55,18 +55,19 @@ public:
 		return temp;
 	}
 
+	//TESTED
 	StoreInventory operator--(int) {
 		StoreInventory temp(itemName, location, numItems);
 		numItems--;
 		return temp;
 	}
 
-	//NEED TO TEST
+	//TESTED
 	bool operator>(const StoreInventory& other) const {
 		return numItems > other.numItems;
 	}
 
-	//NEED TO TEST
+	//TESTED
 	bool operator<(const StoreInventory& other) const {
 		return !(*this > other);
 	}
