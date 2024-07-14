@@ -60,6 +60,26 @@ public:
 		numItems--;
 		return temp;
 	}
+
+	//NEED TO TEST
+	bool operator>(const StoreInventory& other) const {
+		return numItems > other.numItems;
+	}
+
+	//NEED TO TEST
+	bool operator<(const StoreInventory& other) const {
+		return !(*this > other);
+	}
+
+	
+	//NEED TO TEST... single or double equals sign?
+	bool operator=(const StoreInventory& other) const {
+		return itemName = other.itemName;
+	}
+	
+	//NEED TO ADD INPUT/OUTPUT STREAM OPERATORS.
+	//NEED TO ADD ADDITION OPERATOR OVERLOADER.
+	
 };
 
 int main() {
