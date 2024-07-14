@@ -85,6 +85,8 @@ public:
 
 int main() {
 	StoreInventory item1("soup", "aisle1" , 24);
+	StoreInventory item2("bread", "aisle3", 4);
+	StoreInventory item3("soup", "aisle2", 5);
 	std::cout << "Item: " << item1.getItemNames() << "\n";
 	std::cout << "Number of Item: " << item1.getNumItems() << "\n";
 	std::cout << "Location: " << item1.getLocation() << "\n";
@@ -92,6 +94,13 @@ int main() {
 	std::cout << "Updated Item number: " << item1.getNumItems() << "\n";
 	item1--;
 	std::cout << "Updated Item Number: " << item1.getNumItems() << "\n";
+	
+	if (item1 > item3) {
+	std::cout << "More of Item 1";
+	}
+	else {
+	std::cout << "More of Item 3";
+	};
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
